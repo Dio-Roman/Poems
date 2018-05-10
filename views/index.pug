@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        link(rel="stylesheet", href="/static/css/main.css")
+        title= name
+    
+    //- mixin poems(name, read)
+    //-         .card
+    //-             h1 #{name} 
+    //-             pre.stih #{read}
+    body  
+        header.header
+            .header__logo
+            nav.header__nav-top
+                //- button все
+                select.select
+                    option(selected) все 
+                    option лирика / любовь / женшины 
+                    option к  празднику / поздравление 
+                    option о работе 
+                    option другое
+
+        nav.nav-left
+            ul.nav-left__item
+                li
+                    a(href="#")  контакты
+                li
+                    a(href="#") об авторе
+                li
+                    a(href="#") стихотворения
+        //- выдвижное меню
+            ul            
+                li 
+                    a(href='#')= mongo[0].title
+                li 
+                    a(href='#')= mongo[1].title
+                li 
+                    a(href='#')= mongo[2].title
+                li 4th ti
+                li 5th ti
+
+        //- карточки с БД
+        //- .main
+        //-     - let i = 0;
+        //-     while i <= mongo.length-1
+        //-         .card
+        //-             h1= mongo[i].title 
+        //-             pre.stih= mongo[i++].text
+        //- .logo             
+        .main
+            
+            .main__card
+                .main__card__img
+                .main__card__name
+                    h3 Лирические фантазии
+                
+                //- p.stih Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, dolores!
+            .main__card
+                .main__card__img
+                .main__card__name
+                    h3 Лирические фантазии
+            .main__card
+                .main__card__img
+                .main__card__name
+                    h3 Лирические фантазии
+            .main__card
+                .main__card__img
+                .main__card__name
+                    h3 Лирические фантазии
+            .main__card.gradient
+                .gradient-poverh
+                //- h1 Название
+                p.stih Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, accusantium?Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem tempora accusamus repellat ad accusantium mollitia architecto quos est quaerat reiciendis.Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, dolores!
+            .main__card
+                h1 Название
+                p.stih Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, dolores!
+            .main__card
+                h1 Название
+                p.stih Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, dolores!
+            .main__card 
+                h1 Название
+                p.stih Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, dolores!
+            .main__card
+                h1 Название
+                p.stih Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, dolores!
+            .main__card
+                h1 Название
+                p.stih Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, dolores!
+               
+
+        form(action="/" method="POST")
+            input(type="text" placeholder="name of stih" name="title")
+            input(type="text" placeholder="write here" name="text")
+            button(type="submit") ADD
+   
+        footer
+                

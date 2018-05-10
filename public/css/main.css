@@ -1,0 +1,117 @@
+
+/* для выдвижного меню-- */
+/* nav {
+    border: 1px solid blue;
+    width: 15%;
+    position: absolute;
+    left: -176px;
+    transition: all 1s ease;
+    background-color: rgb(102, 236, 120);
+}
+
+nav:hover {
+    left: 0px;
+} */
+/* --для выдвижного меню */
+
+
+
+
+/* левый nav --*/
+
+
+
+
+.nav-left {
+    transform: rotate(-90deg);
+    position: absolute;
+    left: -8rem;
+    top: 10rem;
+    list-style: none;
+    
+}
+.nav-left__item>li {
+    display: inline;
+    margin-right: 10px;
+}
+.nav-left__item>li>a{
+    text-decoration: none;
+}
+.header {
+    width: 75%;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    flex-wrap: wrap;
+    height: 12rem;
+    flex-direction: column;
+    padding-left: 13vw;
+}
+
+.header__logo {
+    height: 5rem;
+    width: 5rem;
+    border: 3px solid #fc1a00;
+    border-radius: 50%;
+    background-image: url(../img/logo.jpg); 
+    background-size: cover;
+    /* position: absolute;
+    left: 18rem;
+    top: 3rem; */
+}
+.header__nav-top {
+    display: flex;
+    align-items: flex-end;
+    /* margin-left: 6rem; */
+}
+.select {
+    border-color: white;
+    color: black;
+    border-bottom: 2px solid #fc1a00;
+    /* margin-left: 5rem; */
+}
+
+.main {
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    flex-wrap: wrap;
+}
+.main__card {
+    border: 1px solid #eee;
+    border-radius: 3%;
+    height: 18rem;
+    width: 13rem;
+    margin-right: 2%;
+    margin-top: 2%;
+    /* padding: 0 2% 0 2%; */
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+.main__card__img {
+    background-image: url("http://ic.pics.livejournal.com/gorlanovvv/68970864/291/291_300.jpg");
+    height: 77%;
+}
+.main__card__name {
+    text-align: center;
+}
+
+.gradient-poverh {
+    background: linear-gradient(rgb(255, 255, 255, 0.1), rgb(255, 255, 255));
+    height: 18rem;
+    width: 13rem;
+    display: grid;
+    position: absolute;
+}
+.gradient {
+    overflow: hidden;
+}
+
+
+.stih {
+    color: brown;
+    font-size: 19px;
+}
