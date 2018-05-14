@@ -68,6 +68,7 @@ nav:hover {
     border-color: white;
     color: black;
     border-bottom: 2px solid #fc1a00;
+    cursor: pointer;
     /* margin-left: 5rem; */
 }
 
@@ -80,20 +81,23 @@ nav:hover {
 }
 .main__card {
     border: 1px solid #eee;
-    border-radius: 3%;
+    border-radius: 4%;
     height: 18rem;
     width: 13rem;
     margin-right: 2%;
     margin-top: 2%;
     /* padding: 0 2% 0 2%; */
-    background-color: #fff;
+    /* background-color: #fff; */
     display: flex;
     flex-direction: column;
     align-items: stretch;
+    overflow: hidden;
 }
 .main__card__img {
-    background-image: url("http://ic.pics.livejournal.com/gorlanovvv/68970864/291/291_300.jpg");
+    /* background-image: url("../img/1-nezn.jpeg"); */
     height: 77%;
+    background-size: cover;
+    background-position: center;
 }
 .main__card__name {
     text-align: center;
@@ -115,3 +119,6 @@ nav:hover {
     color: brown;
     font-size: 19px;
 }
+/* #img2 {
+    width: 30px;
+} */

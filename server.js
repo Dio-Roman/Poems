@@ -5,7 +5,7 @@ const MongoClient = require('mongodb').MongoClient;
 
 var db;
 
-MongoClient.connect('mongodb://...', (err, client) => {
+MongoClient.connect('...', (err, client) => {
     if (err) return console.log(err)
     db = client.db('poems') 
     app.listen(3000, () => {

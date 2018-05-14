@@ -49,23 +49,24 @@ html(lang="en")
         //-         .card
         //-             h1= mongo[i].title 
         //-             pre.stih= mongo[i++].text
-        //- .logo             
+                     
         .main
             
             .main__card
                 .main__card__img
                 .main__card__name
-                    h3 Лирические фантазии
+                    h3= mongo[0].title
                 
                 //- p.stih Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, dolores!
             .main__card
                 .main__card__img
+                //- img.main__card__img(src='../static/img/1-nezn.jpeg', alt='1')
                 .main__card__name
-                    h3 Лирические фантазии
+                    h3= mongo[1].title
             .main__card
                 .main__card__img
                 .main__card__name
-                    h3 Лирические фантазии
+                    h3= mongo[2].title
             .main__card
                 .main__card__img
                 .main__card__name
@@ -97,4 +98,6 @@ html(lang="en")
             button(type="submit") ADD
    
         footer
+
+        script(src="../static/js/css.js")
                 
