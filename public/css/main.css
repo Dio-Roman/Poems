@@ -24,7 +24,7 @@ nav:hover {
 
 .nav-left {
     transform: rotate(-90deg);
-    position: absolute;
+    position: fixed;
     left: -8rem;
     top: 10rem;
     list-style: none;
@@ -71,7 +71,6 @@ nav:hover {
     cursor: pointer;
     /* margin-left: 5rem; */
 }
-
 .main {
     width: 75%;
     display: flex;
@@ -80,45 +79,82 @@ nav:hover {
     flex-wrap: wrap;
 }
 .main__card {
+    text-decoration: none;
+    color: black;
     border: 1px solid #eee;
     border-radius: 4%;
     height: 18rem;
     width: 13rem;
     margin-right: 2%;
     margin-top: 2%;
-    /* padding: 0 2% 0 2%; */
-    /* background-color: #fff; */
     display: flex;
     flex-direction: column;
     align-items: stretch;
     overflow: hidden;
+    transition: box-shadow 700ms ease;
 }
-.main__card__img {
-    /* background-image: url("../img/1-nezn.jpeg"); */
+.main__card-img {
     height: 77%;
     background-size: cover;
     background-position: center;
+    background-color: #d5d5d5;
 }
-.main__card__name {
+.main__card-name {
     text-align: center;
 }
-
-.gradient-poverh {
+/* текст в fade */
+.text-fade {
     background: linear-gradient(rgb(255, 255, 255, 0.1), rgb(255, 255, 255));
     height: 18rem;
     width: 13rem;
     display: grid;
     position: absolute;
+    border-radius: 4%
 }
-.gradient {
-    overflow: hidden;
+.text-fade:hover {
+    background: linear-gradient(rgb(255, 255, 255, 0.1), rgb(252, 26, 0));
 }
-
-
-.stih {
-    color: brown;
-    font-size: 19px;
+.main__card:hover {
+    background-color: #fc1a00;
+    color: #eee;
+    box-shadow: 0px 13px 56px -18px black;
+    
+    /* border: none; */
+    
 }
-/* #img2 {
-    width: 30px;
-} */
+/* card.pug */
+.all-text {
+    display: flex;
+    width: 500px;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    white-space: pre-wrap;
+    font-family: 'Marck Script', cursive;
+    font-size: 28px;
+    position: relative;
+    top: -137px;
+    background-color: white;
+    border: 4px white;
+    border-style: ridge;
+    padding: 0 1.5rem 0 1.5rem;
+}
+.all-text__p::first-letter{
+    color: #fc1a00;
+    font-size: 35px;
+    font-weight: bold;
+}
+.img {
+    height: 250px;
+    width: 100%;
+    animation-name: img-autoskroll;
+    animation-duration: 50s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes img-autoskroll {
+    from {background-position: top;}
+    50% {background-position: center;}
+    to {background-position: bottom;}
+}   
