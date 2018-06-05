@@ -1,42 +1,21 @@
 
 /* для выдвижного меню-- */
-/* nav {
-    border: 1px solid blue;
-    width: 15%;
-    position: absolute;
-    left: -176px;
-    transition: all 1s ease;
-    background-color: rgb(102, 236, 120);
-}
+    /* nav {
+        border: 1px solid blue;
+        width: 15%;
+        position: absolute;
+        left: -176px;
+        transition: all 1s ease;
+        background-color: rgb(102, 236, 120);
+    }
 
-nav:hover {
-    left: 0px;
-} */
+    nav:hover {
+        left: 0px;
+    } */
 /* --для выдвижного меню */
-
-
-
 
 /* левый nav --*/
 
-
-
-
-.nav-left {
-    transform: rotate(-90deg);
-    position: fixed;
-    left: -8rem;
-    top: 10rem;
-    list-style: none;
-    
-}
-.nav-left__item>li {
-    display: inline;
-    margin-right: 10px;
-}
-.nav-left__item>li>a{
-    text-decoration: none;
-}
 .header {
     width: 75%;
     display: flex;
@@ -49,41 +28,39 @@ nav:hover {
 }
 
 .header__logo {
+    margin-top: -1.5rem;
     height: 5rem;
     width: 5rem;
     border: 3px solid #fc1a00;
     border-radius: 50%;
     background-image: url(../img/logo.jpg); 
     background-size: cover;
-    /* position: absolute;
-    left: 18rem;
-    top: 3rem; */
 }
 .header__nav-top {
+    margin-top: -2.5rem;
     display: flex;
     align-items: flex-end;
-    /* margin-left: 6rem; */
 }
 .select {
     border-color: white;
     color: black;
     border-bottom: 2px solid #fc1a00;
     cursor: pointer;
-    /* margin-left: 5rem; */
 }
 .main {
     width: 75%;
     display: flex;
     justify-content: center;
     margin: auto;
+    margin-top: -2rem;
     flex-wrap: wrap;
 }
 .main__card {
     text-decoration: none;
     color: black;
-    border: 1px solid #eee;
+    border: 1px solid #eeeeee;
     border-radius: 4%;
-    height: 18rem;
+    height: 16.5rem;
     width: 13rem;
     margin-right: 2%;
     margin-top: 2%;
@@ -105,7 +82,7 @@ nav:hover {
 /* текст в fade */
 .text-fade {
     background: linear-gradient(rgb(255, 255, 255, 0.1), rgb(255, 255, 255));
-    height: 18rem;
+    height: 16.5rem;
     width: 13rem;
     display: grid;
     position: absolute;
@@ -118,43 +95,4 @@ nav:hover {
     background-color: #fc1a00;
     color: #eee;
     box-shadow: 0px 13px 56px -18px black;
-    
-    /* border: none; */
-    
 }
-/* card.pug */
-.all-text {
-    display: flex;
-    width: 500px;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 auto;
-    white-space: pre-wrap;
-    font-family: 'Marck Script', cursive;
-    font-size: 28px;
-    position: relative;
-    top: -137px;
-    background-color: white;
-    border: 4px white;
-    border-style: ridge;
-    padding: 0 1.5rem 0 1.5rem;
-}
-.all-text__p::first-letter{
-    color: #fc1a00;
-    font-size: 35px;
-    font-weight: bold;
-}
-.img {
-    height: 250px;
-    width: 100%;
-    animation-name: img-autoskroll;
-    animation-duration: 50s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
-@keyframes img-autoskroll {
-    from {background-position: top;}
-    50% {background-position: center;}
-    to {background-position: bottom;}
-}   

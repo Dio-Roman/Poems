@@ -1,0 +1,26 @@
+.footer {
+     /* border-top: 6px solid #d6d5d5; */
+     background-color: #d6d5d5;
+     color: #fc1a00;
+     border-top: 2px solid #fc1a00;
+}
+.footer__wraper {
+    margin-left: 19vw;
+    padding-top: 1rem;
+        padding-bottom: 1rem;
+}
+.footer__wraper>a {
+    vertical-align: super;
+    margin-left: 0.5rem;
+    text-decoration: none;
+    color: #fc1a00;
+}
+.footer__social {
+    height: 1.5rem;
+    width: 1.5rem;
+    display: inline-block;
+}
+.footer__wraper>a:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}

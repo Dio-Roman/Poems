@@ -1,0 +1,18 @@
+.nav-left {
+    transform: rotate(-90deg);
+    position: fixed;
+    left: -6rem;
+    top: 10rem;
+    list-style: none;
+    
+}
+.nav-left__item>li {
+    display: inline;
+    margin-right: 10px;
+}
+.nav-left__item>li>a{
+    text-decoration: none;
+}
+a:active {
+    color: #fc1a00;
+}
