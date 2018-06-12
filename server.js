@@ -33,7 +33,9 @@ MongoClient.connect(dbPath.mongo, (err, client) => {
     // console.log(result)
   })
 })
-
+  app.get('/about', (req, res) => {
+    res.render('about.pug')
+})
 // ---
 // pp.get('/test/:name', function (req, res) {
 //   res.render('index', { title: 'Hey name', message: `Hello ${req.params["name"]}!` }

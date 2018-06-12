@@ -1,8 +1,6 @@
 "use strict";
-// import images from "images.js";
-// import {IMAGES} from 'images.js';
 
-const IMAGES = ["1-nezn.jpeg", "2-chto.jpeg", "3-fontan.jpeg", "4-zima.jpeg", "5-lyric.jpeg", "6-zima.jpeg", "7-razgul.jpeg", "8-razmysh.jpeg"];
+const IMAGES = ["1-nezn.jpeg", "2-chto.jpeg", "3-fontan.jpeg", "4-zima.jpeg", "5-lyric.jpeg", "6-zima.jpeg", "7-razgul.jpeg", "8-razmysh.jpeg", "9-zvezda.jpeg", "10-noch.jpeg", "11-jizn.jpeg", "12-instrum.jpeg", "13-milyi.jpeg", "14-galvan.jpeg", "15-shkola.jpeg", "16-zabot.jpeg", "17-plach.jpeg", "18-rybolov.jpeg", "19-odnu.jpeg", "20-skazka.jpeg"];
 
 // меняет url с нужной картинкой
 
@@ -27,15 +25,15 @@ for (let j = 0; j < mainCard.length; j++) {
 // ----------фильтр-----
 
 let selectArr = document.querySelector(".select")
-let mainCardArr = document.querySelectorAll(".main__card");
+// let mainCardArr = document.querySelectorAll(".main__card");
 
 // фильтрует по жанрам сравнивая value и название класса
 function sort (value) {
-  for(let k = 0; k < mainCardArr.length; k++) {
-    mainCardArr[k].style.display = "initial";
+  for(let k = 0; k < mainCard.length; k++) {
+    mainCard[k].style.display = "initial";
     if(value != "all") {
-      if(mainCardArr[k].classList[1]!= value) {
-            mainCardArr[k].style.display = "none";
+      if(mainCard[k].classList[1]!= value) {
+            mainCard[k].style.display = "none";
         }
     }
 }

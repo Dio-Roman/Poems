@@ -13,11 +13,14 @@
     border: 4px white;
     border-style: ridge;
     padding: 0 1.5rem 0 1.5rem;
+    user-select: none;
+    
 }
 .all-text__p::first-letter{
     color: #fc1a00;
     font-size: 35px;
     font-weight: bold;
+    
 }
 .img {
     height: 16rem;

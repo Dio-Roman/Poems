@@ -7,14 +7,21 @@
 .footer__wraper {
     margin-left: 19vw;
     padding-top: 1rem;
-        padding-bottom: 1rem;
+    padding-bottom: 1rem;
+    font-family: 'Roboto', sans-serif;
+    /* font-weight: bold; */
 }
-.footer__wraper>a {
+.footer__wraper>a,
+.footer__wraper>p {
     vertical-align: super;
     margin-left: 0.5rem;
     text-decoration: none;
     color: #fc1a00;
+    display: inline-block;
+    margin-top: 0;
 }
+
+
 .footer__social {
     height: 1.5rem;
     width: 1.5rem;
