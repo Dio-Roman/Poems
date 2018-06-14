@@ -16,9 +16,9 @@ let mainCard = document.querySelectorAll(".main__card");
 let mainCardNmame = document.querySelectorAll(".main__card-name")
 // let mainCardImg = document.querySelectorAll(".main__card__img");
 for (let j = 0; j < mainCard.length; j++) {
-  if(!mainCard[j].querySelector('.main__card-title').innerText) {
-    mainCardImg[j].style.backgroundImage = '';  //удалить фон картинку
-    mainCardImg[j].classList.add("text-fade");  //добав. класс с fade
+  if (!mainCard[j].querySelector('.main__card-title').innerText) {
+    mainCardImg[j].style.backgroundImage = ''; //удалить фон картинку
+    mainCardImg[j].classList.add("text-fade"); //добав. класс с fade
   }
 }
 
@@ -28,21 +28,20 @@ let selectArr = document.querySelector(".select")
 // let mainCardArr = document.querySelectorAll(".main__card");
 
 // фильтрует по жанрам сравнивая value и название класса
-function sort (value) {
-  for(let k = 0; k < mainCard.length; k++) {
+function sort(value) {
+  for (let k = 0; k < mainCard.length; k++) {
     mainCard[k].style.display = "initial";
-    if(value != "all") {
-      if(mainCard[k].classList[1]!= value) {
-            mainCard[k].style.display = "none";
-        }
+    if (value != "all") {
+      if (mainCard[k].classList[1] != value) {
+        mainCard[k].style.display = "none";
+      }
     }
-}
+  }
 }
 // показ. значение выделенного элемента 
-function selectIndex (){
+function selectIndex() {
   let numberIndex = selectArr.options.selectedIndex;
   let selectValue = selectArr.options[numberIndex].value;
 
   sort(selectValue);
 }
-

@@ -1,9 +1,11 @@
 .footer {
-     /* border-top: 6px solid #d6d5d5; */
-     background-color: #d6d5d5;
-     color: #fc1a00;
-     border-top: 2px solid #fc1a00;
+    /* border-top: 6px solid #d6d5d5; */
+    background-color: #d6d5d5;
+    color: #fc1a00;
+    border-top: 2px solid #fc1a00;
+    margin: 0;
 }
+
 .footer__wraper {
     margin-left: 19vw;
     padding-top: 1rem;
@@ -11,23 +13,62 @@
     font-family: 'Roboto', sans-serif;
     /* font-weight: bold; */
 }
+
 .footer__wraper>a,
 .footer__wraper>p {
-    vertical-align: super;
+    vertical-align: top;
     margin-left: 0.5rem;
     text-decoration: none;
     color: #fc1a00;
     display: inline-block;
     margin-top: 0;
+    
 }
-
 
 .footer__social {
     height: 1.5rem;
     width: 1.5rem;
     display: inline-block;
 }
+
 .footer__wraper>a:hover {
     text-decoration: underline;
     font-weight: bold;
 }
+
+.footer__add {
+    border: 2px solid #811105;
+    background-color: #fc1a00;
+    border-radius: 50%;
+    font-size: 2.5rem;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+    position: relative;
+    right: -88rem;
+    bottom: 12vh;
+    animation-name: pulse;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    cursor: pointer;
+    transition: all 500ms ease;
+}
+
+@keyframes pulse {
+    from {
+        box-shadow: 0 0 0px 1px #d11500;
+    }
+    50% {
+        box-shadow: 0 0 16px 1px #d11500;
+    }
+    to {
+        box-shadow: 0 0 50px 1px #d11500;
+    }
+}
+.footer__add:hover {
+    transform: rotate(270deg)
+}
+/* font {
+    vertical-align: -webkit-baseline-middle;
+} */

@@ -1,13 +1,17 @@
+body {
+    margin: 0;
+}
 .about {
     width: 65%;
     /* display: flex; */
     /* justify-content: center; */
     margin: auto;
-    /* margin-top: -2rem; */
+    margin-top: -2rem;
     /* flex-wrap: wrap; */
     font-family: 'Roboto', sans-serif;
     /* font-weight: regular; */
 }
+
 .about__img {
     height: 19rem;
     float: right;
@@ -15,12 +19,14 @@
     margin-top: 2rem;
     margin-right: 5rem;
 }
+
 .about__h1 {
     margin-right: inherit;
     margin-top: 4rem;
     color: #a7a7a7;
     border-bottom: 2px solid #fc1a00;
 }
+
 .about__p {
     width: 60%;
     display: inline-block;

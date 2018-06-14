@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Document
+    body
+        form(action="/add" method="POST")
+            input(type="text" placeholder="name of stih" name="title")
+            input(type="radio" id="radio1" value="lyrics" name="genre")
+            label(for="radio3") lyrics
+            input(type="radio" id="radio2" value="job" name="genre")
+            label(for="radio3") job
+            input(type="radio" id="radio3" value="other" name="genre")
+            label(for="radio3") other
+            input(type="text" placeholder="name of img file" name="img")
+            input(type="file", name="imgfile" enctype="multipart/form-data")
+            textarea( placeholder="write here whole text" cols="50" rows="10" name="text")
+            button(type="submit") ADD

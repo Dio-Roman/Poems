@@ -55,12 +55,7 @@ html(lang="en")
                         .main__card-name
                             h3.main__card-title= mongo[i++].title
           
-        form(action="/" method="POST")
-            input(type="text" placeholder="name of stih" name="title")
-            input(type="text" placeholder="genre" name="genre")
-            input(type="text" placeholder="img" name="img")
-            input(type="text" placeholder="write here" name="text")
-            button(type="submit") ADD
+        
         include footer.pug
         
             

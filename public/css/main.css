@@ -1,6 +1,6 @@
-
 /* для выдвижного меню-- */
-    /* nav {
+
+/* nav {
         border: 1px solid blue;
         width: 15%;
         position: absolute;
@@ -12,10 +12,13 @@
     nav:hover {
         left: 0px;
     } */
+
 /* --для выдвижного меню */
 
 /* левый nav --*/
-
+body {
+    margin: 0;
+}
 .header {
     width: 75%;
     display: flex;
@@ -33,20 +36,23 @@
     width: 5rem;
     border: 3px solid #fc1a00;
     border-radius: 50%;
-    background-image: url(../img/logo.jpg); 
+    background-image: url(../img/logo.jpg);
     background-size: cover;
 }
+
 .header__nav-top {
     margin-top: -2.5rem;
     display: flex;
     align-items: flex-end;
 }
+
 .select {
     border-color: white;
     color: black;
     border-bottom: 2px solid #fc1a00;
     cursor: pointer;
 }
+
 .main {
     width: 75%;
     display: flex;
@@ -55,6 +61,7 @@
     margin-top: -2rem;
     flex-wrap: wrap;
 }
+
 .main__card {
     text-decoration: none;
     color: black;
@@ -72,16 +79,20 @@
     font-family: 'Roboto', sans-serif;
     /* font-weight: bold; */
 }
+
 .main__card-img {
     height: 77%;
     background-size: cover;
     background-position: center;
     background-color: #d5d5d5;
 }
+
 .main__card-name {
     text-align: center;
 }
+
 /* текст в fade */
+
 .text-fade {
     background: linear-gradient(rgb(255, 255, 255, 0.1), rgb(255, 255, 255));
     height: 16.5rem;
@@ -90,24 +101,32 @@
     position: absolute;
     border-radius: 4%
 }
+
 .text-fade:hover {
     background: linear-gradient(rgb(255, 255, 255, 0.1), rgb(252, 26, 0));
 }
+
 .main__card:hover {
     background-color: #fc1a00;
     color: #eee;
     box-shadow: 0px 13px 56px -18px black;
 }
+
 /* out при клике на Об  авторе */
+
 body {
-   
     /* animation-name: body-out; */
     animation-duration: 0.5s;
     animation-timing-function: linear;
     /* animation-iteration-count: infinite; */
     animation-direction: alternate;
 }
+
 @keyframes body-out {
-    from {right: 0%;}
-    to {right: 100%;}
-}   
+    from {
+        right: 0%;
+    }
+    to {
+        right: 100%;
+    }
+}

@@ -14,14 +14,14 @@
     border-style: ridge;
     padding: 0 1.5rem 0 1.5rem;
     user-select: none;
-    
 }
-.all-text__p::first-letter{
+
+.all-text__p::first-letter {
     color: #fc1a00;
     font-size: 35px;
     font-weight: bold;
-    
 }
+
 .img {
     height: 16rem;
     width: 100%;
@@ -32,8 +32,15 @@
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
+
 @keyframes img-autoskroll {
-    from {background-position: top;}
-    50% {background-position: center;}
-    to {background-position: bottom;}
-}   
+    from {
+        background-position: top;
+    }
+    50% {
+        background-position: center;
+    }
+    to {
+        background-position: bottom;
+    }
+}
