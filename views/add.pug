@@ -4,17 +4,34 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        title Document
+        link(href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet")
+        link(rel="stylesheet", href="/static/css/add.css")
+        title Add poems
     body
-        form(action="/add" method="POST")
-            input(type="text" placeholder="name of stih" name="title")
-            input(type="radio" id="radio1" value="lyrics" name="genre")
-            label(for="radio3") lyrics
-            input(type="radio" id="radio2" value="job" name="genre")
-            label(for="radio3") job
-            input(type="radio" id="radio3" value="other" name="genre")
-            label(for="radio3") other
-            input(type="text" placeholder="name of img file" name="img")
-            input(type="file", name="imgfile" enctype="multipart/form-data")
-            textarea( placeholder="write here whole text" cols="50" rows="10" name="text")
-            button(type="submit") ADD
+        .add
+            h1.add__title Добавить новый стих
+            form(action="/upload" method="POST" enctype="multipart/form-data")
+                .add__left.wrap
+                    label(for="stihname") Название стиха
+                    input(type="text" id="stihname" placeholder="Title of the poem" name="title")
+                    label(for="stihtext") Текст стиха
+                    textarea(id="stihtext" placeholder="Write here the text..." cols="50" rows="10" name="text")
+                .add__right.wrap
+                    .radio
+                        p Выберите жанр
+                        input(type="radio" id="radio1" value="lyrics" name="genre") 
+                        label(for="radio3") lyrics
+                        input(type="radio" id="radio2" value="job" name="genre")
+                        label(for="radio3") job
+                        input(type="radio" id="radio3" value="other" name="genre")
+                        label(for="radio3") other
+                    p Имя файла изображения
+                    input(type="text" placeholder="for example: 21-fontan" name="img")
+                    //- button(type="submit") ADD
+                    input.choosefile(type="file" name="file")
+                    input(type="submit" value="Добавить")
+            //- form(action="/upload" method="POST" enctype="multipart/form-data") 
+            //-     input.choosefile(type="file" name="file")
+            //-     input(type="submit" value="Submit")
+                    
+                    

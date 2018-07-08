@@ -1,10 +1,30 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
+const path = require("path");
 const MongoClient = require('mongodb').MongoClient;
 const dbPath = require('./db/dbPath');
+const fs = require("fs");
+const multer = require("multer");
+
+const storage = multer.diskStorage({
+  destination: (req, file, cb) => {
+    cb(null, 'public/img/uploads')
+  },
+  filename: (req, file, cb) => {
+    cb(null, file.originalname)
+  }
+});
+const upload = multer({storage: storage});
 
 var db;
+
+const handleError = (err, res) => {
+  res
+    .status(500)
+    .contentType("text/plain")
+    .end("Oops! Something went wrong!");
+};
 
 MongoClient.connect(dbPath.mongo, (err, client) => {
   if (err) return console.log(err)
@@ -24,7 +44,6 @@ app.use(bodyParser.urlencoded({
 }))
 app.use(bodyParser.json())
 
-//   app.use(express.static('public'))
 
 app.get('/', (req, res) => {
   db.collection('poems').find().toArray((err, result) => {
@@ -45,10 +64,6 @@ app.get('/add', (req, res) => {
   res.render('add.pug')
 })
 
-// ---
-// pp.get('/test/:name', function (req, res) {
-//   res.render('index', { title: 'Hey name', message: `Hello ${req.params["name"]}!` }
-// ---
 
 // выводит стих по id orderNumber
 var ObjectID = require('mongodb').ObjectID;
@@ -69,6 +84,18 @@ app.get('/:id', (req, res) => {
   })
 })
 
+app.post(
+  "/upload",
+  upload.single("file" /* name attribute of <file> element in my form */),
+  (req, res) => {
+    // res.send(req.files)
+    db.collection('poems').save(req.body, (err, result) => {
+      if (err) return console.log(err)
+      res.redirect('/')
+    })
+    // res.redirect('/')
+  }
+);
 
 app.post('/add', (req, res) => {
   console.log(req.body)
