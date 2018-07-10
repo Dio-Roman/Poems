@@ -35,7 +35,7 @@ html(lang="en")
                     a(href='#')= mongo[0].title
                 li 
                     a(href='#')= mongo[1].title
-                li 
+                li background-image: url(../static/img/${mongo[i].img}.jpeg);
                     a(href='#')= mongo[2].title
                 li 4th ti(class="class-"+)
                 li 5th ti (class="class"+mongo[i].genre) (onclick="testfunc()")animated.
@@ -51,7 +51,7 @@ html(lang="en")
                             p= mongo[i++].text
                             //- span= mongo[i]._id
                     else
-                        .main__card-img
+                        .main__card-img(style=`background-image: url(../static/img/${mongo[i].img}.jpeg);`)
                         .main__card-name
                             h3.main__card-title= mongo[i++].title
           

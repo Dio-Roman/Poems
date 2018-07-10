@@ -6,11 +6,14 @@ html(lang="en")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
         link(href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet")
         link(rel="stylesheet", href="/static/css/add.css")
+        link(rel="stylesheet", href="/static/css/nav-left.css")
+        link(rel="stylesheet", href="/static/css/footer.css")
         title Add poems
     body
+        include nav-left.pug
         .add
             h1.add__title Добавить новый стих
-            form(action="/upload" method="POST" enctype="multipart/form-data")
+            form(action="/upload" method="POST" enctype="multipart/form-data" autocomplete="off")
                 .add__left.wrap
                     label(for="stihname") Название стиха
                     input(type="text" id="stihname" placeholder="Title of the poem" name="title")
@@ -30,6 +33,7 @@ html(lang="en")
                     //- button(type="submit") ADD
                     input.choosefile(type="file" name="file")
                     input(type="submit" value="Добавить")
+        include footer.pug
             //- form(action="/upload" method="POST" enctype="multipart/form-data") 
             //-     input.choosefile(type="file" name="file")
             //-     input(type="submit" value="Submit")
