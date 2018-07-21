@@ -7,6 +7,7 @@ body {
     width: 65%;
     margin: auto;
     margin-top: -2rem;
+    margin-bottom: 2.5rem;
 }
 
 .add__title {
@@ -17,7 +18,9 @@ body {
 }
 
 input,
-textarea {
+textarea,
+.logout,
+.btn-choose-file {
     border: 2px solid grey;
     border-radius: 62px;
     line-height: 1.5rem;
@@ -31,10 +34,12 @@ textarea {
 
 .choosefile {
     border: none;
+    visibility: hidden;
 }
 
 input:hover,
-textarea:hover {
+textarea:hover,
+.btn-choose-file:hover {
     box-shadow: 0 0 7px 2px black;
 }
 
@@ -49,3 +54,18 @@ textarea:hover {
 label {
     text-align: center;
 }
+
+.logout {
+    pointer-events: none;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    background-color: #ddd;
+    text-decoration: none;
+    color: #000;
+}
+.btn-choose-file {
+    background-color: #ddd;
+}
+/* .submit {
+    pointer-events: none;
+} */

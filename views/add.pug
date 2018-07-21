@@ -16,26 +16,26 @@ html(lang="en")
             form(action="/upload" method="POST" enctype="multipart/form-data" autocomplete="off")
                 .add__left.wrap
                     label(for="stihname") Название стиха
-                    input(type="text" id="stihname" placeholder="Title of the poem" name="title")
+                    input(type="text" id="stihname" placeholder="Поставьте пробел, если отсутствует" name="title")
                     label(for="stihtext") Текст стиха
-                    textarea(id="stihtext" placeholder="Write here the text..." cols="50" rows="10" name="text")
+                    textarea(id="stihtext" placeholder="..." cols="50" rows="10" name="text")
                 .add__right.wrap
                     .radio
                         p Выберите жанр
                         input(type="radio" id="radio1" value="lyrics" name="genre") 
-                        label(for="radio3") lyrics
+                        label(for="radio3") лирика
                         input(type="radio" id="radio2" value="job" name="genre")
-                        label(for="radio3") job
+                        label(for="radio3") о работе
                         input(type="radio" id="radio3" value="other" name="genre")
-                        label(for="radio3") other
+                        label(for="radio3") другое
                     p Имя файла изображения
-                    input(type="text" placeholder="for example: 21-fontan" name="img")
-                    //- button(type="submit") ADD
-                    input.choosefile(type="file" name="file")
-                    input(type="submit" value="Добавить")
+                    input(id="img-name" type="text" placeholder="Например: 21-fontan" name="img")
+                    .btn-choose-file
+                        label(for="file") Выберите файл...
+                    input.choosefile(id="file" type="file" name="file")
+                    input.submit#submit(type="submit" value="Добавить")
+                    a.logout(href="/logout", disabled) logout
         include footer.pug
-            //- form(action="/upload" method="POST" enctype="multipart/form-data") 
-            //-     input.choosefile(type="file" name="file")
-            //-     input(type="submit" value="Submit")
+        script(src="../static/js/checkandblock.js")
                     
                     
