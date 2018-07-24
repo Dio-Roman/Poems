@@ -1,6 +1,6 @@
 "use strict";
 
-let IMAGES = ["1-nezn.jpeg", "2-chto.jpeg", "3-fontan.jpeg", "4-zima.jpeg", "5-lyric.jpeg", "6-zima.jpeg", "7-razgul.jpeg", "8-razmysh.jpeg", "9-zvezda.jpeg", "10-noch.jpeg", "11-jizn.jpeg", "12-instrum.jpeg", "13-milyi.jpeg", "14-galvan.jpeg", "15-shkola.jpeg", "16-zabot.jpeg", "17-plach.jpeg", "18-rybolov.jpeg", "19-odnu.jpeg", "20-skazka.jpeg"];
+// let IMAGES = ["1-nezn.jpeg", "2-chto.jpeg", "3-fontan.jpeg", "4-zima.jpeg", "5-lyric.jpeg", "6-zima.jpeg", "7-razgul.jpeg", "8-razmysh.jpeg", "9-zvezda.jpeg", "10-noch.jpeg", "11-jizn.jpeg", "12-instrum.jpeg", "13-milyi.jpeg", "14-galvan.jpeg", "15-shkola.jpeg", "16-zabot.jpeg", "17-plach.jpeg", "18-rybolov.jpeg", "19-odnu.jpeg", "20-skazka.jpeg"];
 
 let mainCardImg = document.querySelectorAll('.main__card-img');
 let mainCard = document.querySelectorAll(".main__card");
