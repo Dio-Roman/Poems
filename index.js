@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 const path = require("path");
+const port = process.env.PORT || 3000;
 const MongoClient = require('mongodb').MongoClient;
 const dbPath = require('./db/dbPath');
 const fs = require("fs");
@@ -47,9 +48,13 @@ const handleError = (err, res) => {
 MongoClient.connect(dbPath.mongo, (err, client) => {
   if (err) return console.log(err)
   dbase = client.db('poems')
-  app.listen(3000, () => {
-    console.log('listening on 3000')
-  })
+  // app.listen(port, () => {
+  //   console.log('listening on 3000')
+  // })
+})
+
+app.listen(port, () => {
+  console.log('listening on 3000')
 })
 
 app.set('view engine', 'pug')
@@ -190,8 +195,3 @@ app.get('/logout',  function (req, res, next)  {
     });
   }
 });
-
-var CleanCSS = require('clean-css');
-var input = ['.static/css/main.css', '.static/css/card.css'];
-// var options = { /* options */ };
-var output = new CleanCSS().minify(input);
