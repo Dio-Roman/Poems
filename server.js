@@ -190,3 +190,8 @@ app.get('/logout',  function (req, res, next)  {
     });
   }
 });
+
+var CleanCSS = require('clean-css');
+var input = ['.static/css/main.css', '.static/css/card.css'];
+// var options = { /* options */ };
+var output = new CleanCSS().minify(input);
