@@ -56,9 +56,20 @@
     cursor: pointer;
     transition: all 500ms ease;
 }
+@media (min-width: 508px) and (max-width: 950px) {
+    .footer__add {
+        margin-left: 42vw;
+    }
+    .auth-form {
+        margin-left: 19vw;
+    }
+}
 @media (max-width: 507px) {
     .footer__add {
         margin-left: 42vw;
+    }
+    .auth-form {
+        margin-left: 19vw;
     }
 }
 .footer__limk {
@@ -86,11 +97,10 @@
     display: none;
     border: 0.15rem solid #fc1a00;
     border-radius: 1rem;
-    z-index: 5;
+    /* z-index: 5;
     z-index: 5;
     left: 57rem;
-    bottom: -85rem;
-
+    bottom: -85rem; */
     padding-left: 1rem;
     padding-right: 1rem;
 }

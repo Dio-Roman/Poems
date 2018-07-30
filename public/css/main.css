@@ -73,6 +73,9 @@ body {
 .main__card-name {
     text-align: center;
 }
+.main__card-title {
+    font-size: 1.5em;
+}
 
 /* текст в fade */
 
