@@ -1,3 +1,7 @@
+body {
+    margin: 0;
+}
+
 .all-text {
     display: flex;
     width: 500px;
@@ -24,8 +28,7 @@
 
 .img {
     height: 16rem;
-    width: 100%;
-    margin-left: 2rem;
+    margin-left: 2.5rem;
     animation-name: img-autoskroll;
     animation-duration: 50s;
     animation-timing-function: linear;
@@ -44,3 +47,12 @@
         background-position: bottom;
     }
 }
+
+@media(max-width: 633px) {
+    .all-text {
+        position: initial;
+        width: initial;
+        margin-left: 2rem;
+        margin-left: 2.3rem;
+    }
+} 

@@ -1,12 +1,14 @@
 .footer {
-    background-color: #d6d5d5;
-    color: #fc1a00;
-    border-top: 2px solid #fc1a00;
-    margin: 0;
+    position: sticky;
+    z-index: 1;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+    margin: 0;
+    background-color: #d6d5d5;
+    color: #fc1a00;
+    border-top: 2px solid #fc1a00;
 }
 
 .footer__wraper {
@@ -18,19 +20,19 @@
 
 .footer__wraper>a,
 .footer__wraper>p {
+    display: inline-block;
+    margin-top: 0;
     vertical-align: top;
     margin-left: 0.5rem;
     text-decoration: none;
     color: #fc1a00;
-    display: inline-block;
-    margin-top: 0;
     
 }
 
 .footer__social {
+    display: inline-block;
     height: 1.5rem;
     width: 1.5rem;
-    display: inline-block;
 }
 
 .footer__wraper>a:hover {
@@ -39,15 +41,13 @@
 }
 
 .footer__add {
-    border: 2px solid #811105;
-    background-color: #fc1a00;
-    border-radius: 50%;
-    font-size: 2.5rem;
     padding-left: 0.7rem;
     padding-right: 0.7rem;
     margin-right: 3rem;
-    /* left: 90vw;
-    bottom: 12vh; */
+    border: 2px solid #811105;
+    background-color: #fc1a0099;
+    border-radius: 50%;
+    font-size: 2.5rem;
     animation-name: pulse;
     animation-duration: 1s;
     animation-timing-function: linear;
@@ -59,6 +59,8 @@
 @media (min-width: 508px) and (max-width: 950px) {
     .footer__add {
         margin-left: 42vw;
+        margin-bottom: 2vw;
+        margin-top: 2vw;
     }
     .auth-form {
         margin-left: 19vw;
@@ -67,9 +69,13 @@
 @media (max-width: 507px) {
     .footer__add {
         margin-left: 42vw;
+        margin-bottom: 2vw;
+        margin-top: 2vw;
     }
     .auth-form {
-        margin-left: 19vw;
+        margin-left: 10vw;
+        margin-right: 10vw;
+        
     }
 }
 .footer__limk {
@@ -89,18 +95,27 @@
     }
 }
 
-
 .footer__add:hover {
     transform: rotate(270deg);
 }
 .auth-form {
     display: none;
-    border: 0.15rem solid #fc1a00;
-    border-radius: 1rem;
-    /* z-index: 5;
-    z-index: 5;
-    left: 57rem;
-    bottom: -85rem; */
     padding-left: 1rem;
     padding-right: 1rem;
+    border: 0.15rem solid #fc1a00;
+    border-radius: 1rem;
+}
+
+.login {
+    margin-top: 0.5rem;
+    background-color: #fc1a0099;
+    border: 2px solid #fc1a00;
+    border-radius: 7px;
+}
+
+@media (max-width: 395px) {
+    .footer__wraper {
+        margin: auto;
+        padding-left: 17px;
+    }
 }
