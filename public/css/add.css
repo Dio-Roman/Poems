@@ -1,6 +1,8 @@
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
+    display: grid;
+    height: 100vh;
 }
 
 .add {
@@ -37,10 +39,11 @@ textarea {
     visibility: hidden;
 }
 
-input:hover,
-textarea:hover,
-.btn-choose-file:hover {
-    box-shadow: 0 0 7px 2px black;
+.btn-choose-file,
+.btn-choose-file label,
+input[type=radio],
+input[type=submit] {
+    cursor: pointer;
 }
 
 .wrap {
@@ -65,4 +68,26 @@ label {
 }
 .btn-choose-file {
     background-color: #ddd;
+}
+
+.radio label {
+    cursor: pointer;
+}
+
+.label {
+    font-size: 18px;
+    font-family: inherit;
+    color: #666463;
+    font-weight: bolder;
+}
+
+#stihname {
+    margin-bottom: 0;
+}
+
+.count-poems {
+    color: #fc1a00;
+    font-size: 20px;
+    font-family: inherit;
+    font-weight: bolder;
 }

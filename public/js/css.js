@@ -43,3 +43,5 @@ function selectIndex() {
 
   sort(selectValue);
 }
+
+document.querySelector('#copyright').textContent = new Date().getFullYear();

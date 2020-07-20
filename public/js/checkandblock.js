@@ -1,3 +1,6 @@
+const countPoems = document.querySelector('.count-poems').innerHTML;
+document.querySelector('#img-name').setAttribute('placeholder', `Например: ${+countPoems + 1}-fontan`);
+
 // Проверка, чтоб были заполнены все (5 шт.) поля
 
 let submit = [false, false, false, false, false];
@@ -45,6 +48,12 @@ document.querySelector('#file').oninput = function () {
 }
 
 document.querySelector('#submit').addEventListener('click', (e) => {
+    let name = document.querySelector('#stihname').value;
+    if (name === ' ') { // если нет название (пробел), то меняем form action на /uploadone
+        document.querySelector('form').setAttribute('action', '/uploadone')
+        console.log('empty');
+    }
+
     if (!submit.every(elem => elem == true)) {
         e.preventDefault();
     }

@@ -11,6 +11,7 @@ const mongoose = require('mongoose');
 const session = require('express-session');
 const MongoStore = require('connect-mongo')(session);
 const User = require('./models/user');
+const sharp = require('sharp');
 
 var db = mongoose.connect(dbPath.auth);
 
@@ -86,9 +87,13 @@ app.get('/about', (req, res) => {
 })
 
 app.get('/add', (req, res) => {
-  res.render('add.pug')
+  dbase.collection('poems').find().toArray((err, result) => {
+    if (err) return console.log(err)
+    res.render('add.pug', {
+      countPoems: result.length
+    })
+  })
 })
-
 
 // выводит стих по id orderNumber
 const ObjectID = require('mongodb').ObjectID;
@@ -105,15 +110,31 @@ app.get('/:id', (req, res) => {
     })
     // res.send(result)
     // console.log(result)
-
   })
 })
 
 app.post(
   "/upload",
   upload.single("file" /* name attribute of <file> element in my form */),
-  (req, res) => {
+  (req, res, cb) => {
+    let width = 208;
+    sharp(req.file.path).resize(width).toFile(`public/img/small-${req.file.originalname}`)
     // res.send(req.files)
+
+    dbase.collection('poems').save(req.body, (err, result) => {
+      if (err) return console.log(err);
+      res.redirect('/')
+    })
+  }
+);
+
+//  без названия - мелкая картинка не нужна
+app.post(
+  "/uploadone",
+  upload.single("file" /* name attribute of <file> element in my form */),
+  (req, res, cb) => {
+    // res.send(req.files)
+
     dbase.collection('poems').save(req.body, (err, result) => {
       if (err) return console.log(err);
       res.redirect('/')
@@ -129,10 +150,7 @@ app.post(
 //   })
 // })
 
-// -------------------------------
 // -----------login---------------
-// --------------------------------
-
 app.post('/', function (req, res, next) {
   // confirm that user typed same password twice
   if (req.body.password !== req.body.passwordConf) {
