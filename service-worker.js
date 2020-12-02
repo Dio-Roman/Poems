@@ -29,7 +29,7 @@ self.addEventListener('install', function(event) {
            caches.open(CACHE_NAME)
                .then(function(cache) {
                    // Получаем данные из манифеста (они кэшируются)
-                   fetch('/static/favicon/manifest.json')
+                   fetch('./static/favicon/manifest.json')
                        .then(response => {
                            response.json()
                        })
@@ -38,13 +38,16 @@ self.addEventListener('install', function(event) {
                            const urlsToCache = [
                             //    '/',
                               //  '/about',
-                               '/static/favicon/favicon-32x32.png',
+                               './static/favicon/favicon-32x32.png',
                             //    'http://localhost:3000',
                                ...staticAssets
                            ]
                            cache.addAll(urlsToCache)
                            console.log('cached');
                        })
+                       .catch(err => {
+                           console.log('install':, err)
+                        })
                })
        );
    }
