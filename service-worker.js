@@ -29,7 +29,7 @@ self.addEventListener('install', function(event) {
            caches.open(CACHE_NAME)
                .then(function(cache) {
                    // Получаем данные из манифеста (они кэшируются)
-                   fetch('./static/favicon/manifest.json')
+                   fetch('/static/favicon/manifest.json')
                        .then(response => {
                            response.json()
                        })
